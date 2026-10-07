@@ -31,14 +31,14 @@ rules/block.txt   # блокировать
 rules/ru.txt      # обычные российские ресурсы, объединяются с DIRECT
 ```
 
-Добавьте `geosite:имя-категории` или `geoip:имя-категории` в нужный файл, запустите `./scripts/generate-template.sh`, проверьте `jq empty routing.base.json routing.template.json` и отправьте изменения в `main`. Сборка запустится автоматически; вручную: **Actions → Build routing bundle → Run workflow**.
+Добавьте `geosite:имя-категории` или `geoip:имя-категории` в нужный файл, запустите `bash ./scripts/generate-template.sh`, проверьте `jq empty routing.base.json routing.template.json` и отправьте изменения в `main`. Сборка запустится автоматически; вручную: **Actions → Build routing bundle → Run workflow**.
 
 ## Локальная проверка
 
 ```bash
-./scripts/generate-template.sh /tmp/routing.template.json
+bash ./scripts/generate-template.sh /tmp/routing.template.json
 diff -u routing.template.json /tmp/routing.template.json
-./scripts/generate-routing.sh \
+bash ./scripts/generate-routing.sh \
   https://raw.githubusercontent.com/whylansq/ru-routing-rules/release \
   "$(date +%s)" /tmp/routing.json
 jq empty /tmp/routing.json
