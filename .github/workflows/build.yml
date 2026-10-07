@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ./scripts/generate-template.sh /tmp/routing.template.json
+          bash ./scripts/generate-template.sh /tmp/routing.template.json
           diff -u routing.template.json /tmp/routing.template.json
           jq empty routing.base.json routing.template.json
 
@@ -53,7 +53,7 @@ jobs:
         run: |
           set -euo pipefail
           base_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/release"
-          ./scripts/generate-routing.sh "${base_url}" "$(date +%s)" publish/routing.json
+          bash ./scripts/generate-routing.sh "${base_url}" "$(date +%s)" publish/routing.json
           cd publish
           sha256sum geoip.dat > geoip.dat.sha256sum
           sha256sum geosite.dat > geosite.dat.sha256sum
