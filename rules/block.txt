@@ -1,0 +1,2 @@
+# Advertising domains.
+geosite:category-ads-all
