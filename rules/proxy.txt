@@ -1,0 +1,12 @@
+# Blocked Russian resources must be checked before the broad RU direct rules.
+geosite:ru-blocked
+geoip:ru-blocked
+geoip:ru-blocked-community
+geoip:re-filter
+
+# Services explicitly routed through the VPN.
+geosite:youtube
+geosite:discord
+geosite:openai
+geosite:meta
+geosite:twitter
