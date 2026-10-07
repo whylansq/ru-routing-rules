@@ -1,0 +1,4 @@
+# Ordinary Russian domains and IP ranges go directly.
+geosite:tld-ru
+geosite:category-ru
+geoip:ru
