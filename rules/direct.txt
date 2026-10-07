@@ -1,0 +1,12 @@
+# Services that must bypass the VPN.
+geosite:private
+geoip:private
+
+# Spotify works through the user's Russian exit.
+geosite:spotify
+
+# Russian services that often require a Russian IP.
+geosite:category-bank-ru
+geosite:category-gov-ru
+geosite:category-ecommerce-ru
+geosite:ru-available-only-inside
